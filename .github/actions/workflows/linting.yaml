@@ -1,0 +1,33 @@
+name: "lint"
+on:
+  push:
+    branches: 
+      - '*'         # matches every branch that doesn't contain a '/'
+      - '*/*'       # matches every branch containing a single '/'
+      - '**'        # matches every branch
+      - main, master
+  pull_request:
+    branches: 
+      - main, master
+
+jobs:
+  linting:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v3
+      - name: Load & cache dependencies
+        uses: ./.github/actions/cached-deps
+      - name: Linting the code...
+        run: make lint
+  unit-testing:
+    runs-on: ubuntu-20.04
+    needs: linting
+    steps:   
+      - name: Git checkout
+        uses: actions/checkout@v3
+      - name: Load & cache dependencies
+        uses: ./.github/actions/cached-deps
+      - name: Testing the code...
+        run: python -m pytest
+  

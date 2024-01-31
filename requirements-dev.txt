@@ -1,0 +1,6 @@
+pytest==7.4.0
+mypy==1.5
+black==23.7
+ruff==0.0.287
+yamllint==1.32
+isort==5.12.0

@@ -1,0 +1,11 @@
+source_accounts:
+  - "737445757960"  # aus-ingenico-prod
+  - "294240344722"  # aus-ingenico-sandbox
+  - "598415464321"  # aus-ingenico-tmsdev
+  - "808546557274"  # aus-ingenico-tmspreprod
+  - "482306290573"  # aus-ingenico-tmsprod
+  - "369851636234"  # aus-ingenico-security
+  - "937272479139"  # aus-ingenico-network
+  - "828451327314"  # aus-ingenico-dev
+  - "038855240031"  # aus-ingenico-connect-prod
+  - "641207199449"  # aus-ingenico-connect-nonprod
